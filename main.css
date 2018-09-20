@@ -154,6 +154,8 @@ main {
 
 .aboutmetitle p {
      color: #2d3c49;
+     margin-left: 3%;
+     margin-right: 3%;
 }
 
 /* Footer */
@@ -229,5 +231,9 @@ main {
      }
      .pone, .ptwo, .pfour, .pfive {
           margin-right: 5%;
+     }
+     .aboutmetitle p {
+          margin-left: 0;
+          margin-right: 0;
      }
 }
