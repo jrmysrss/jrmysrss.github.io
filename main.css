@@ -152,6 +152,10 @@ main {
      padding-bottom: 0.5em;
 }
 
+.aboutmetitle p {
+     color: #2d3c49;
+}
+
 /* Footer */
 .copyright {
      text-align: center;
@@ -170,7 +174,7 @@ main {
 
      .projectimg {
           opacity: 1;
-          height: 300px;
+          height: auto;
      }
      .project-text {
           position: relative;
@@ -193,7 +197,7 @@ main {
      }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 775px) {
 
      .featuredtitle, .aboutmetitle {
           text-align: left;
@@ -207,7 +211,7 @@ main {
      }
 
      .projectimg {
-          height: 250px;
+          height: auto;
      }
 
 }
