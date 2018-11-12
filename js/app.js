@@ -108,6 +108,7 @@ function disableEnableClick() {
   }, 1000);
 }
 
+
 // function that disables elements to be clicked
 function disableClick() {
   let deck = document.querySelectorAll('.deck');
