@@ -18,9 +18,6 @@ function startGame() {
   moves = 0;
   movesText.innerHTML = moves;
   movesResults.innerHTML = moves;
-  stopTimer();
-  timerOutput.innerHTML = "00:00";
-  timerOutputResults.innerHTML = "00:00";
 
 }
 startGame();
@@ -63,13 +60,12 @@ allCards.forEach(function(card) {
     //Runs the star rating function each click
     starRating();
     starResults();
+    //Starts the timer on the first click
+    startTimer();
   });
 });
 
 
-deck.addEventListener("click", function() {
-  startTimer();
-}, {once : true});
 
 //Check the 2 cards if they both have matching classNames
 function checkMatch() {
@@ -92,10 +88,11 @@ function checkMatch() {
     }, 1000);
   }
 
-  checkWin();
-
   // Runs the disable & enable functions each match
   disableEnableClick();
+
+  // Runs a win check during each match check
+  checkWin();
 
   // increment move counter on each match check and update html
   moves++;
@@ -111,24 +108,23 @@ function disableEnableClick() {
   }, 1000);
 }
 
-
 // function that disables elements to be clicked
 function disableClick() {
   let deck = document.querySelectorAll('.deck');
 
-  for (let i = 0; i < deck.length; i++) {
+  for (var i = 0; i < deck.length; i++) {
     deck[i].classList.add('disable');
   }
-};
+}
 
 // function that enables elements to be clicked
 function enableClick() {
   let deck = document.querySelectorAll('.deck');
 
-  for (let i = 0; i < deck.length; i++) {
+  for (var i = 0; i < deck.length; i++) {
     deck[i].classList.remove('disable');
   }
-};
+}
 
 
 //Removes the open, show, and wrong classes
@@ -253,8 +249,7 @@ function checkWin() {
   const matchingCards = document.querySelectorAll(".match");
 
   if (matchingCards.length == 16) {
-    stopTimer();
-    toggleModal();
+    winGame();
   }
 };
 
@@ -271,14 +266,14 @@ function resetResults() {
 
 // Play Again button - when clicked will close modal, and reset the game
 document.querySelector(".play-again-btn").addEventListener("click", () => {
-  stopTimer();
-  timerOutput.innerHTML = "00:00";
-  timerOutputResults.innerHTML = "00:00";
+  toggleModal();
   startGame();
   resetFlips();
   resetRating();
   resetResults();
-  toggleModal();
+  timerOutput.innerHTML = "00:00";
+  timerOutputResults.innerHTML = "00:00";
+
 });
 
 

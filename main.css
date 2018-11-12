@@ -31,7 +31,7 @@ color: #2d3c49;
 /*Header Styling */
 header {
   width: 100%;
-  border-bottom: 3px solid #7d97ad;
+  /* border-bottom: 3px solid #7d97ad; */
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 20px;
@@ -138,7 +138,9 @@ main {
 
 .git-link a:link, .git-link a:visited {
   text-decoration: none;
-  color: #2d3c49;
+  color: #7d97ad;
+  font-weight: lighter;
+  font-size: 18px;
 }
 
 /* About Me */
@@ -218,6 +220,7 @@ main {
 
   .project-img {
     height: auto;
+    border-radius: 8px;
   }
 }
 
