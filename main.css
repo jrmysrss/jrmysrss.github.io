@@ -6,7 +6,7 @@ body, html {
 }
 
 body {
-  font-family: Roboto;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   color: #2d3c49;
 }
 
@@ -44,7 +44,6 @@ header {
 }
 
 .logo {
-  width: 25%;
 }
 
 .logo-img {
@@ -53,9 +52,8 @@ header {
 }
 
 .title {
-  width: 75%;
   padding: 1em;
-  text-align: right;
+  text-align: left;
 }
 
 #SubTitle {
