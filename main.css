@@ -188,7 +188,6 @@ main {
     left: 0;
     text-align: left;
     transform: translate(0%, 0%);
-    margin-bottom: 20px;
   }
 
   .project {
@@ -197,6 +196,7 @@ main {
 
   .project-text {
     padding: 10px;
+    margin-bottom: 5px;
   }
 
   .project-text h3 {
@@ -214,11 +214,16 @@ main {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    display: inline-block;
+    box-shadow: 0 10px 40px -10px rgba(0,64,128,.2);
+    margin-bottom: 50px;
+    border-radius: 8px;
   }
 
   .project-img {
     height: auto;
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
   }
 }
 
@@ -230,6 +235,7 @@ main {
   }
 
   .project {
+    width: 30%;
     margin-left: 0;
     margin-right: 0;
   }
